@@ -69,7 +69,14 @@ const [isLogin, setIsLogin] = useState(startWithLogin);
             : "Sign up to start using the library."}
         </p>
 
-        <form onSubmit={handleSubmit}>
+        <form
+  onSubmit={handleSubmit}
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    gap: "15px",
+  }}
+>
           {!isLogin && (
             <input
               type="text"
